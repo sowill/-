@@ -1,0 +1,1207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SysModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="SysModelStoreContainer">
+          <EntitySet Name="FileUploader" EntityType="SysModel.Store.FileUploader" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FileUploaderSysPerson" EntityType="SysModel.Store.FileUploaderSysPerson" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="hr_pam_department" EntityType="SysModel.Store.hr_pam_department" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="hr_pam_employee" EntityType="SysModel.Store.hr_pam_employee" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="hr_pam_part" EntityType="SysModel.Store.hr_pam_part" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="hr_srv_history" EntityType="SysModel.Store.hr_srv_history" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SysException" EntityType="SysModel.Store.SysException" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SysField" EntityType="SysModel.Store.SysField" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SysLog" EntityType="SysModel.Store.SysLog" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SysMenu" EntityType="SysModel.Store.SysMenu" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SysMenuSysRole" EntityType="SysModel.Store.SysMenuSysRole" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SysPerson" EntityType="SysModel.Store.SysPerson" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SysRole" EntityType="SysModel.Store.SysRole" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SysRoleSysPerson" EntityType="SysModel.Store.SysRoleSysPerson" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_FILEUPLO_REFERENCE_FILEUPLO" Association="SysModel.Store.FK_FILEUPLO_REFERENCE_FILEUPLO">
+            <End Role="FileUploader" EntitySet="FileUploader" />
+            <End Role="FileUploaderSysPerson" EntitySet="FileUploaderSysPerson" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FILEUPLO_REFERENCE_SYSPERSO" Association="SysModel.Store.FK_FILEUPLO_REFERENCE_SYSPERSO">
+            <End Role="SysPerson" EntitySet="SysPerson" />
+            <End Role="FileUploaderSysPerson" EntitySet="FileUploaderSysPerson" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SYSFIELD_REFERENCE_SYSFIELD" Association="SysModel.Store.FK_SYSFIELD_REFERENCE_SYSFIELD">
+            <End Role="SysField" EntitySet="SysField" />
+            <End Role="SysField1" EntitySet="SysField" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SYSMENU_REFERENCE_SYSMENU" Association="SysModel.Store.FK_SYSMENU_REFERENCE_SYSMENU">
+            <End Role="SysMenu" EntitySet="SysMenu" />
+            <End Role="SysMenu1" EntitySet="SysMenu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SYSMENUS_REFERENCE_SYSMENU" Association="SysModel.Store.FK_SYSMENUS_REFERENCE_SYSMENU">
+            <End Role="SysMenu" EntitySet="SysMenu" />
+            <End Role="SysMenuSysRole" EntitySet="SysMenuSysRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SYSMENUS_REFERENCE_SYSROLE" Association="SysModel.Store.FK_SYSMENUS_REFERENCE_SYSROLE">
+            <End Role="SysRole" EntitySet="SysRole" />
+            <End Role="SysMenuSysRole" EntitySet="SysMenuSysRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SYSROLES_REFERENCE_SYSPERSO" Association="SysModel.Store.FK_SYSROLES_REFERENCE_SYSPERSO">
+            <End Role="SysPerson" EntitySet="SysPerson" />
+            <End Role="SysRoleSysPerson" EntitySet="SysRoleSysPerson" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SYSROLES_REFERENCE_SYSROLE" Association="SysModel.Store.FK_SYSROLES_REFERENCE_SYSROLE">
+            <End Role="SysRole" EntitySet="SysRole" />
+            <End Role="SysRoleSysPerson" EntitySet="SysRoleSysPerson" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="FileUploader">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="36" />
+          <Property Name="Name" Type="nvarchar" MaxLength="200" />
+          <Property Name="Path" Type="nvarchar" MaxLength="200" />
+          <Property Name="FullPath" Type="varchar" MaxLength="500" />
+          <Property Name="Suffix" Type="nvarchar" MaxLength="200" />
+          <Property Name="Size" Type="int" />
+          <Property Name="Remark" Type="nvarchar" />
+          <Property Name="State" Type="nvarchar" MaxLength="200" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreatePerson" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="FileUploaderSysPerson">
+          <Key>
+            <PropertyRef Name="SysPersonId" />
+            <PropertyRef Name="FileUploaderId" />
+          </Key>
+          <Property Name="SysPersonId" Type="nvarchar" Nullable="false" MaxLength="36" />
+          <Property Name="FileUploaderId" Type="nvarchar" Nullable="false" MaxLength="36" />
+        </EntityType>
+        <EntityType Name="hr_pam_department">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="departmentname" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="departmentdetails" Type="varchar" MaxLength="50" />
+          <Property Name="departmentnumbersum" Type="int" />
+        </EntityType>
+        <EntityType Name="hr_pam_employee">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="employeename" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="employeeage" Type="int" Nullable="false" />
+          <Property Name="employeesex" Type="int" Nullable="false" />
+          <Property Name="employeestudy" Type="int" Nullable="false" />
+          <Property Name="employeetitle" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="employeesalary" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="hr_pam_part">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="employeeid" Type="int" Nullable="false" />
+          <Property Name="departmentid" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="hr_srv_history">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="employeeid" Type="int" Nullable="false" />
+          <Property Name="chuxing" Type="int" Nullable="false" />
+          <Property Name="chuxing_date" Type="datetime" Nullable="false" />
+          <Property Name="memo" Type="varchar" MaxLength="200" />
+          <Property Name="fanhui_date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SysException">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="36" />
+          <Property Name="LeiXing" Type="nvarchar" MaxLength="200" />
+          <Property Name="Message" Type="nvarchar" />
+          <Property Name="Result" Type="nvarchar" MaxLength="200" />
+          <Property Name="Remark" Type="nvarchar" />
+          <Property Name="State" Type="nvarchar" MaxLength="200" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreatePerson" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="SysField">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="36" />
+          <Property Name="MyTexts" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="ParentId" Type="nvarchar" MaxLength="36" />
+          <Property Name="MyTables" Type="nvarchar" MaxLength="200" />
+          <Property Name="MyColums" Type="nvarchar" MaxLength="200" />
+          <Property Name="Sort" Type="int" />
+          <Property Name="Remark" Type="nvarchar" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreatePerson" Type="nvarchar" MaxLength="200" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdatePerson" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="SysLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="36" />
+          <Property Name="PersonId" Type="nvarchar" MaxLength="36" />
+          <Property Name="Message" Type="nvarchar" />
+          <Property Name="Result" Type="nvarchar" MaxLength="200" />
+          <Property Name="MenuId" Type="nvarchar" MaxLength="36" />
+          <Property Name="Ip" Type="nvarchar" MaxLength="200" />
+          <Property Name="Remark" Type="nvarchar" />
+          <Property Name="State" Type="nvarchar" MaxLength="200" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreatePerson" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="SysMenu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="36" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="ParentId" Type="nvarchar" MaxLength="36" />
+          <Property Name="Url" Type="nvarchar" MaxLength="200" />
+          <Property Name="Iconic" Type="nvarchar" MaxLength="200" />
+          <Property Name="Sort" Type="int" />
+          <Property Name="Remark" Type="nvarchar" />
+          <Property Name="State" Type="nvarchar" MaxLength="200" />
+          <Property Name="CreatePerson" Type="nvarchar" MaxLength="200" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdatePerson" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="SysMenuSysRole">
+          <Key>
+            <PropertyRef Name="SysMenuId" />
+            <PropertyRef Name="SysRoleId" />
+          </Key>
+          <Property Name="SysMenuId" Type="nvarchar" Nullable="false" MaxLength="36" />
+          <Property Name="SysRoleId" Type="nvarchar" Nullable="false" MaxLength="36" />
+        </EntityType>
+        <EntityType Name="SysPerson">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="36" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="MyName" Type="nvarchar" MaxLength="200" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="SurePassword" Type="nvarchar" MaxLength="200" />
+          <Property Name="MobilePhoneNumber" Type="nvarchar" MaxLength="200" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="200" />
+          <Property Name="Province" Type="nvarchar" MaxLength="200" />
+          <Property Name="City" Type="nvarchar" MaxLength="200" />
+          <Property Name="Village" Type="nvarchar" MaxLength="200" />
+          <Property Name="Address" Type="nvarchar" MaxLength="200" />
+          <Property Name="EmailAddress" Type="nvarchar" MaxLength="200" />
+          <Property Name="Remark" Type="decimal" />
+          <Property Name="State" Type="nvarchar" MaxLength="200" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreatePerson" Type="nvarchar" MaxLength="200" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdatePerson" Type="nvarchar" MaxLength="200" />
+          <Property Name="Version" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="SysRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="36" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="Description" Type="nvarchar" />
+          <Property Name="Remark" Type="nvarchar" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreatePerson" Type="nvarchar" MaxLength="200" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdatePerson" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="SysRoleSysPerson">
+          <Key>
+            <PropertyRef Name="SysPersonId" />
+            <PropertyRef Name="SysRoleId" />
+          </Key>
+          <Property Name="SysPersonId" Type="nvarchar" Nullable="false" MaxLength="36" />
+          <Property Name="SysRoleId" Type="nvarchar" Nullable="false" MaxLength="36" />
+        </EntityType>
+        <Association Name="FK_FILEUPLO_REFERENCE_FILEUPLO">
+          <End Role="FileUploader" Type="SysModel.Store.FileUploader" Multiplicity="1" />
+          <End Role="FileUploaderSysPerson" Type="SysModel.Store.FileUploaderSysPerson" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FileUploader">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FileUploaderSysPerson">
+              <PropertyRef Name="FileUploaderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FILEUPLO_REFERENCE_SYSPERSO">
+          <End Role="SysPerson" Type="SysModel.Store.SysPerson" Multiplicity="1" />
+          <End Role="FileUploaderSysPerson" Type="SysModel.Store.FileUploaderSysPerson" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SysPerson">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FileUploaderSysPerson">
+              <PropertyRef Name="SysPersonId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SYSFIELD_REFERENCE_SYSFIELD">
+          <End Role="SysField" Type="SysModel.Store.SysField" Multiplicity="0..1" />
+          <End Role="SysField1" Type="SysModel.Store.SysField" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SysField">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SysField1">
+              <PropertyRef Name="ParentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SYSMENU_REFERENCE_SYSMENU">
+          <End Role="SysMenu" Type="SysModel.Store.SysMenu" Multiplicity="0..1" />
+          <End Role="SysMenu1" Type="SysModel.Store.SysMenu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SysMenu">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SysMenu1">
+              <PropertyRef Name="ParentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SYSMENUS_REFERENCE_SYSMENU">
+          <End Role="SysMenu" Type="SysModel.Store.SysMenu" Multiplicity="1" />
+          <End Role="SysMenuSysRole" Type="SysModel.Store.SysMenuSysRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SysMenu">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SysMenuSysRole">
+              <PropertyRef Name="SysMenuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SYSMENUS_REFERENCE_SYSROLE">
+          <End Role="SysRole" Type="SysModel.Store.SysRole" Multiplicity="1" />
+          <End Role="SysMenuSysRole" Type="SysModel.Store.SysMenuSysRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SysRole">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SysMenuSysRole">
+              <PropertyRef Name="SysRoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SYSROLES_REFERENCE_SYSPERSO">
+          <End Role="SysPerson" Type="SysModel.Store.SysPerson" Multiplicity="1" />
+          <End Role="SysRoleSysPerson" Type="SysModel.Store.SysRoleSysPerson" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SysPerson">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SysRoleSysPerson">
+              <PropertyRef Name="SysPersonId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SYSROLES_REFERENCE_SYSROLE">
+          <End Role="SysRole" Type="SysModel.Store.SysRole" Multiplicity="1" />
+          <End Role="SysRoleSysPerson" Type="SysModel.Store.SysRoleSysPerson" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SysRole">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SysRoleSysPerson">
+              <PropertyRef Name="SysRoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SysModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="SysEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SysException" EntityType="SysModel.SysException" />
+          <EntitySet Name="SysField" EntityType="SysModel.SysField" />
+          <EntitySet Name="SysLog" EntityType="SysModel.SysLog" />
+          <EntitySet Name="SysMenu" EntityType="SysModel.SysMenu" />
+          <AssociationSet Name="FK_SYSFIELD_REFERENCE_SYSFIELD" Association="SysModel.FK_SYSFIELD_REFERENCE_SYSFIELD">
+            <End Role="SysField" EntitySet="SysField" />
+            <End Role="SysField1" EntitySet="SysField" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SYSMENU_REFERENCE_SYSMENU" Association="SysModel.FK_SYSMENU_REFERENCE_SYSMENU">
+            <End Role="SysMenu" EntitySet="SysMenu" />
+            <End Role="SysMenu1" EntitySet="SysMenu" />
+          </AssociationSet>
+          <EntitySet Name="SysRole" EntityType="SysModel.SysRole" />
+          <AssociationSet Name="SysMenuSysRole" Association="SysModel.SysMenuSysRole">
+            <End Role="SysMenu" EntitySet="SysMenu" />
+            <End Role="SysRole" EntitySet="SysRole" />
+          </AssociationSet>
+          <EntitySet Name="FileUploader" EntityType="SysModel.FileUploader" />
+          <EntitySet Name="SysPerson" EntityType="SysModel.SysPerson" />
+          <AssociationSet Name="FileUploaderSysPerson" Association="SysModel.FileUploaderSysPerson">
+            <End Role="FileUploader" EntitySet="FileUploader" />
+            <End Role="SysPerson" EntitySet="SysPerson" />
+          </AssociationSet>
+          <AssociationSet Name="SysRoleSysPerson" Association="SysModel.SysRoleSysPerson">
+            <End Role="SysPerson" EntitySet="SysPerson" />
+            <End Role="SysRole" EntitySet="SysRole" />
+          </AssociationSet>
+          <EntitySet Name="hr_pam_department" EntityType="SysModel.hr_pam_department" />
+          <EntitySet Name="hr_pam_part" EntityType="SysModel.hr_pam_part" />
+          <EntitySet Name="hr_pam_employee" EntityType="SysModel.hr_pam_employee" />
+          <EntitySet Name="hr_srv_history" EntityType="SysModel.hr_srv_history" />
+          </EntityContainer>
+        <EntityType Name="SysException">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="String" Name="Id" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LeiXing" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Message" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Result" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Remark" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="State" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateTime" />
+          <Property Type="String" Name="CreatePerson" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SysField">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="String" Name="Id" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MyTexts" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ParentId" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MyTables" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MyColums" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Sort" />
+          <Property Type="String" Name="Remark" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateTime" />
+          <Property Type="String" Name="CreatePerson" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="UpdateTime" />
+          <Property Type="String" Name="UpdatePerson" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SysField1" Relationship="SysModel.FK_SYSFIELD_REFERENCE_SYSFIELD" FromRole="SysField" ToRole="SysField1" />
+          <NavigationProperty Name="SysField2" Relationship="SysModel.FK_SYSFIELD_REFERENCE_SYSFIELD" FromRole="SysField1" ToRole="SysField" />
+        </EntityType>
+        <EntityType Name="SysLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="String" Name="Id" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PersonId" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Message" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Result" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MenuId" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Ip" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Remark" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="State" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateTime" />
+          <Property Type="String" Name="CreatePerson" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SysMenu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="String" Name="Id" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ParentId" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Url" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Iconic" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Sort" />
+          <Property Type="String" Name="Remark" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="State" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CreatePerson" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateTime" />
+          <Property Type="DateTime" Name="UpdateTime" />
+          <Property Type="String" Name="UpdatePerson" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SysMenu1" Relationship="SysModel.FK_SYSMENU_REFERENCE_SYSMENU" FromRole="SysMenu" ToRole="SysMenu1" />
+          <NavigationProperty Name="SysMenu2" Relationship="SysModel.FK_SYSMENU_REFERENCE_SYSMENU" FromRole="SysMenu1" ToRole="SysMenu" />
+          <NavigationProperty Name="SysRole" Relationship="SysModel.SysMenuSysRole" FromRole="SysMenu" ToRole="SysRole" />
+        </EntityType>
+        <Association Name="FK_SYSFIELD_REFERENCE_SYSFIELD">
+          <End Type="SysModel.SysField" Role="SysField" Multiplicity="0..1" />
+          <End Type="SysModel.SysField" Role="SysField1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SysField">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SysField1">
+              <PropertyRef Name="ParentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SYSMENU_REFERENCE_SYSMENU">
+          <End Type="SysModel.SysMenu" Role="SysMenu" Multiplicity="0..1" />
+          <End Type="SysModel.SysMenu" Role="SysMenu1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SysMenu">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SysMenu1">
+              <PropertyRef Name="ParentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="SysRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="String" Name="Id" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Remark" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateTime" />
+          <Property Type="String" Name="CreatePerson" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="UpdateTime" />
+          <Property Type="String" Name="UpdatePerson" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SysMenu" Relationship="SysModel.SysMenuSysRole" FromRole="SysRole" ToRole="SysMenu" />
+          <NavigationProperty Name="SysPerson" Relationship="SysModel.SysRoleSysPerson" FromRole="SysRole" ToRole="SysPerson" />
+        </EntityType>
+        <Association Name="SysMenuSysRole">
+          <End Type="SysModel.SysMenu" Role="SysMenu" Multiplicity="*" />
+          <End Type="SysModel.SysRole" Role="SysRole" Multiplicity="*" />
+        </Association>
+        <EntityType Name="FileUploader">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="String" Name="Id" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Path" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FullPath" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Suffix" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Size" />
+          <Property Type="String" Name="Remark" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="State" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateTime" />
+          <Property Type="String" Name="CreatePerson" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SysPerson" Relationship="SysModel.FileUploaderSysPerson" FromRole="FileUploader" ToRole="SysPerson" />
+        </EntityType>
+        <EntityType Name="SysPerson">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="String" Name="Id" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MyName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SurePassword" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MobilePhoneNumber" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PhoneNumber" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Province" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="City" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Village" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EmailAddress" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Remark" Precision="18" Scale="0" />
+          <Property Type="String" Name="State" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateTime" />
+          <Property Type="String" Name="CreatePerson" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="UpdateTime" />
+          <Property Type="String" Name="UpdatePerson" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Binary" Name="Version" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="FileUploader" Relationship="SysModel.FileUploaderSysPerson" FromRole="SysPerson" ToRole="FileUploader" />
+          <NavigationProperty Name="SysRole" Relationship="SysModel.SysRoleSysPerson" FromRole="SysPerson" ToRole="SysRole" />
+        </EntityType>
+        <Association Name="FileUploaderSysPerson">
+          <End Type="SysModel.FileUploader" Role="FileUploader" Multiplicity="*" />
+          <End Type="SysModel.SysPerson" Role="SysPerson" Multiplicity="*" />
+        </Association>
+        <Association Name="SysRoleSysPerson">
+          <End Type="SysModel.SysPerson" Role="SysPerson" Multiplicity="*" />
+          <End Type="SysModel.SysRole" Role="SysRole" Multiplicity="*" />
+        </Association>
+        <EntityType Name="hr_pam_department">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="departmentname" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="departmentdetails" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="departmentnumbersum" />
+        </EntityType>
+        <EntityType Name="hr_pam_part">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="employeeid" Nullable="false" />
+          <Property Type="Int32" Name="departmentid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="hr_pam_employee">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="employeename" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="employeeage" Nullable="false" />
+          <Property Type="Int32" Name="employeesex" Nullable="false" />
+          <Property Type="Int32" Name="employeestudy" Nullable="false" />
+          <Property Type="String" Name="employeetitle" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="employeesalary" Nullable="false" />
+        </EntityType>
+        <EntityType Name="hr_srv_history">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="employeeid" Nullable="false" />
+          <Property Type="Int32" Name="chuxing" Nullable="false" />
+          <Property Type="DateTime" Name="chuxing_date" Nullable="false" />
+          <Property Type="String" Name="memo" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="fanhui_date" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SysModelStoreContainer" CdmEntityContainer="SysEntities">
+          <EntitySetMapping Name="SysException">
+            <EntityTypeMapping TypeName="SysModel.SysException">
+              <MappingFragment StoreEntitySet="SysException">
+                <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Result" ColumnName="Result" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="LeiXing" ColumnName="LeiXing" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SysField">
+            <EntityTypeMapping TypeName="SysModel.SysField">
+              <MappingFragment StoreEntitySet="SysField">
+                <ScalarProperty Name="UpdatePerson" ColumnName="UpdatePerson" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+                <ScalarProperty Name="MyColums" ColumnName="MyColums" />
+                <ScalarProperty Name="MyTables" ColumnName="MyTables" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="MyTexts" ColumnName="MyTexts" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SysLog">
+            <EntityTypeMapping TypeName="SysModel.SysLog">
+              <MappingFragment StoreEntitySet="SysLog">
+                <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Ip" ColumnName="Ip" />
+                <ScalarProperty Name="MenuId" ColumnName="MenuId" />
+                <ScalarProperty Name="Result" ColumnName="Result" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SysMenu">
+            <EntityTypeMapping TypeName="SysModel.SysMenu">
+              <MappingFragment StoreEntitySet="SysMenu">
+                <ScalarProperty Name="UpdatePerson" ColumnName="UpdatePerson" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+                <ScalarProperty Name="Iconic" ColumnName="Iconic" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SysRole">
+            <EntityTypeMapping TypeName="SysModel.SysRole">
+              <MappingFragment StoreEntitySet="SysRole">
+                <ScalarProperty Name="UpdatePerson" ColumnName="UpdatePerson" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="SysMenuSysRole" TypeName="SysModel.SysMenuSysRole" StoreEntitySet="SysMenuSysRole">
+            <EndProperty Name="SysRole">
+              <ScalarProperty Name="Id" ColumnName="SysRoleId" />
+            </EndProperty>
+            <EndProperty Name="SysMenu">
+              <ScalarProperty Name="Id" ColumnName="SysMenuId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <EntitySetMapping Name="FileUploader">
+            <EntityTypeMapping TypeName="SysModel.FileUploader">
+              <MappingFragment StoreEntitySet="FileUploader">
+                <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Size" ColumnName="Size" />
+                <ScalarProperty Name="Suffix" ColumnName="Suffix" />
+                <ScalarProperty Name="FullPath" ColumnName="FullPath" />
+                <ScalarProperty Name="Path" ColumnName="Path" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SysPerson">
+            <EntityTypeMapping TypeName="SysModel.SysPerson">
+              <MappingFragment StoreEntitySet="SysPerson">
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="UpdatePerson" ColumnName="UpdatePerson" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Village" ColumnName="Village" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Province" ColumnName="Province" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="MobilePhoneNumber" ColumnName="MobilePhoneNumber" />
+                <ScalarProperty Name="SurePassword" ColumnName="SurePassword" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="MyName" ColumnName="MyName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="FileUploaderSysPerson" TypeName="SysModel.FileUploaderSysPerson" StoreEntitySet="FileUploaderSysPerson">
+            <EndProperty Name="SysPerson">
+              <ScalarProperty Name="Id" ColumnName="SysPersonId" />
+            </EndProperty>
+            <EndProperty Name="FileUploader">
+              <ScalarProperty Name="Id" ColumnName="FileUploaderId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="SysRoleSysPerson" TypeName="SysModel.SysRoleSysPerson" StoreEntitySet="SysRoleSysPerson">
+            <EndProperty Name="SysRole">
+              <ScalarProperty Name="Id" ColumnName="SysRoleId" />
+            </EndProperty>
+            <EndProperty Name="SysPerson">
+              <ScalarProperty Name="Id" ColumnName="SysPersonId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <EntitySetMapping Name="hr_pam_department">
+            <EntityTypeMapping TypeName="SysModel.hr_pam_department">
+              <MappingFragment StoreEntitySet="hr_pam_department">
+                <ScalarProperty Name="departmentnumbersum" ColumnName="departmentnumbersum" />
+                <ScalarProperty Name="departmentdetails" ColumnName="departmentdetails" />
+                <ScalarProperty Name="departmentname" ColumnName="departmentname" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hr_pam_part">
+            <EntityTypeMapping TypeName="SysModel.hr_pam_part">
+              <MappingFragment StoreEntitySet="hr_pam_part">
+                <ScalarProperty Name="departmentid" ColumnName="departmentid" />
+                <ScalarProperty Name="employeeid" ColumnName="employeeid" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hr_pam_employee">
+            <EntityTypeMapping TypeName="SysModel.hr_pam_employee">
+              <MappingFragment StoreEntitySet="hr_pam_employee">
+                <ScalarProperty Name="employeesalary" ColumnName="employeesalary" />
+                <ScalarProperty Name="employeetitle" ColumnName="employeetitle" />
+                <ScalarProperty Name="employeestudy" ColumnName="employeestudy" />
+                <ScalarProperty Name="employeesex" ColumnName="employeesex" />
+                <ScalarProperty Name="employeeage" ColumnName="employeeage" />
+                <ScalarProperty Name="employeename" ColumnName="employeename" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hr_srv_history">
+            <EntityTypeMapping TypeName="SysModel.hr_srv_history">
+              <MappingFragment StoreEntitySet="hr_srv_history">
+                <ScalarProperty Name="fanhui_date" ColumnName="fanhui_date" />
+                <ScalarProperty Name="memo" ColumnName="memo" />
+                <ScalarProperty Name="chuxing_date" ColumnName="chuxing_date" />
+                <ScalarProperty Name="chuxing" ColumnName="chuxing" />
+                <ScalarProperty Name="employeeid" ColumnName="employeeid" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model1" ZoomLevel="66">
+        <EntityTypeShape EntityType="SysModel.SysException" Width="1.5" PointX="2.75" PointY="0.75" Height="2.5430916341145746" />
+        <EntityTypeShape EntityType="SysModel.SysField" Width="1.5" PointX="0.75" PointY="0.75" Height="3.4981901041666674" />
+        <EntityTypeShape EntityType="SysModel.SysLog" Width="1.5" PointX="4.75" PointY="0.75" Height="2.9251310221354174" />
+        <EntityTypeShape EntityType="SysModel.SysMenu" Width="1.5" PointX="4" PointY="4.625" Height="3.7681689453124996" />
+        <AssociationConnector Association="SysModel.FK_SYSFIELD_REFERENCE_SYSFIELD" >
+          <ConnectorPoint PointX="1.2819230769230767" PointY="4.2481901041666674" />
+          <ConnectorPoint PointX="1.2819230769230767" PointY="4.4981901041666674" />
+          <ConnectorPoint PointX="1.7284615384615383" PointY="4.4981901041666674" />
+          <ConnectorPoint PointX="1.7284615384615383" PointY="4.2481901041666674" />
+        </AssociationConnector>
+        <AssociationConnector Association="SysModel.FK_SYSMENU_REFERENCE_SYSMENU" >
+          <ConnectorPoint PointX="4.5319230769230767" PointY="8.3931689453125" />
+          <ConnectorPoint PointX="4.5319230769230767" PointY="8.6431689453125" />
+          <ConnectorPoint PointX="4.9784615384615378" PointY="8.6431689453125" />
+          <ConnectorPoint PointX="4.9784615384615378" PointY="8.3931689453125" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="SysModel.SysRole" Width="1.5" PointX="13" PointY="4.75" Height="2.8441984049479174" />
+        <AssociationConnector Association="SysModel.SysMenuSysRole" >
+          <ConnectorPoint PointX="4.75" PointY="4.625" />
+          <ConnectorPoint PointX="4.75" PointY="4" />
+          <ConnectorPoint PointX="12.625" PointY="4" />
+          <ConnectorPoint PointX="12.625" PointY="6.1720992024739587" />
+          <ConnectorPoint PointX="13" PointY="6.1720992024739587" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="SysModel.FileUploader" Width="1.5" PointX="8.125" PointY="5.25" Height="3.0289925130208353" />
+        <EntityTypeShape EntityType="SysModel.SysPerson" Width="1.5" PointX="10.375" PointY="4.25" Height="4.87693359375" />
+        <AssociationConnector Association="SysModel.FileUploaderSysPerson" >
+          <ConnectorPoint PointX="9.625" PointY="6.7644962565104176" />
+          <ConnectorPoint PointX="10.375" PointY="6.7644962565104176" />
+        </AssociationConnector>
+        <AssociationConnector Association="SysModel.SysRoleSysPerson" >
+          <ConnectorPoint PointX="11.875" PointY="5.3985496012369794" />
+          <ConnectorPoint PointX="12.541666666666666" PointY="5.3985496012369785" />
+          <ConnectorPoint PointX="12.708333333333334" PointY="5.3985496012369794" />
+          <ConnectorPoint PointX="13" PointY="5.3985496012369794" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="SysModel.hr_pam_department" Width="1.5" PointX="9.875" PointY="1.375" Height="1.7354337565104174" />
+        <EntityTypeShape EntityType="SysModel.hr_pam_part" Width="1.5" PointX="11.75" PointY="1.375" Height="1.5506396484375031" />
+        <EntityTypeShape EntityType="SysModel.hr_pam_employee" Width="1.5" PointX="13.625" PointY="0.625" Height="2.2898160807291674" />
+        <EntityTypeShape EntityType="SysModel.hr_srv_history" Width="1.5" PointX="0.75" PointY="5.75" Height="2.1050219726562531" />
+        </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

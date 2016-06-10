@@ -1,0 +1,164 @@
+C:\Users\summerming\Desktop\2012111015221318\Solution\App\bin\App.dll
+C:\Users\summerming\Desktop\2012111015221318\Solution\App\bin\App.pdb
+C:\Users\summerming\Desktop\2012111015221318\Solution\App\bin\BLL.dll
+C:\Users\summerming\Desktop\2012111015221318\Solution\App\bin\Common.dll
+C:\Users\summerming\Desktop\2012111015221318\Solution\App\bin\DAL.dll
+C:\Users\summerming\Desktop\2012111015221318\Solution\App\bin\IBLL.dll
+C:\Users\summerming\Desktop\2012111015221318\Solution\App\bin\WFActivitys.dll
+C:\Users\summerming\Desktop\2012111015221318\Solution\App\bin\BLL.pdb
+C:\Users\summerming\Desktop\2012111015221318\Solution\App\bin\Common.pdb
+C:\Users\summerming\Desktop\2012111015221318\Solution\App\bin\DAL.pdb
+C:\Users\summerming\Desktop\2012111015221318\Solution\App\bin\IBLL.pdb
+C:\Users\summerming\Desktop\2012111015221318\Solution\App\bin\WFActivitys.pdb
+C:\Users\summerming\Desktop\2012111015221318\Solution\App\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\summerming\Desktop\2012111015221318\Solution\App\obj\Debug\Activity1.g.xaml
+C:\Users\summerming\Desktop\2012111015221318\Solution\App\obj\Debug\_App.g.cs
+C:\Users\summerming\Desktop\2012111015221318\Solution\App\obj\Debug\Activity1.g.cs
+C:\Users\summerming\Desktop\2012111015221318\Solution\App\obj\Debug\App.csproj.XamlGeneratedCodeFileListAbsolute.txt
+C:\Users\summerming\Desktop\2012111015221318\Solution\App\obj\Debug\App.csproj.XamlGeneratedXamlFileListAbsolute.txt
+C:\Users\summerming\Desktop\2012111015221318\Solution\App\obj\Debug\App.dll
+C:\Users\summerming\Desktop\2012111015221318\Solution\App\obj\Debug\App.pdb
+C:\Users\km-zhang\Desktop\2012111015221318\Solution\App\bin\App.dll
+C:\Users\km-zhang\Desktop\2012111015221318\Solution\App\bin\App.pdb
+C:\Users\km-zhang\Desktop\2012111015221318\Solution\App\bin\BLL.dll
+C:\Users\km-zhang\Desktop\2012111015221318\Solution\App\bin\Common.dll
+C:\Users\km-zhang\Desktop\2012111015221318\Solution\App\bin\DAL.dll
+C:\Users\km-zhang\Desktop\2012111015221318\Solution\App\bin\IBLL.dll
+C:\Users\km-zhang\Desktop\2012111015221318\Solution\App\bin\BLL.pdb
+C:\Users\km-zhang\Desktop\2012111015221318\Solution\App\bin\Common.pdb
+C:\Users\km-zhang\Desktop\2012111015221318\Solution\App\bin\DAL.pdb
+C:\Users\km-zhang\Desktop\2012111015221318\Solution\App\bin\IBLL.pdb
+C:\Users\km-zhang\Desktop\2012111015221318\Solution\App\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\km-zhang\Desktop\2012111015221318\Solution\App\obj\Debug\Activity1.g.xaml
+C:\Users\km-zhang\Desktop\2012111015221318\Solution\App\obj\Debug\_App.g.cs
+C:\Users\km-zhang\Desktop\2012111015221318\Solution\App\obj\Debug\Activity1.g.cs
+C:\Users\km-zhang\Desktop\2012111015221318\Solution\App\obj\Debug\App.csproj.XamlGeneratedCodeFileListAbsolute.txt
+C:\Users\km-zhang\Desktop\2012111015221318\Solution\App\obj\Debug\App.csproj.XamlGeneratedXamlFileListAbsolute.txt
+C:\Users\km-zhang\Desktop\2012111015221318\Solution\App\obj\Debug\App.dll
+C:\Users\km-zhang\Desktop\2012111015221318\Solution\App\obj\Debug\App.pdb
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\App\bin\App.dll
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\App\bin\App.pdb
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\App\bin\BLL.dll
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\App\bin\Common.dll
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\App\bin\DAL.dll
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\App\bin\IBLL.dll
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\App\bin\BLL.pdb
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\App\bin\Common.pdb
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\App\bin\DAL.pdb
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\App\bin\IBLL.pdb
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\App\obj\Debug\ResolveAssemblyReference.cache
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\App\obj\Debug\Activity1.g.xaml
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\App\obj\Debug\_App.g.cs
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\App\obj\Debug\Activity1.g.cs
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\App\obj\Debug\App.csproj.XamlGeneratedCodeFileListAbsolute.txt
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\App\obj\Debug\App.csproj.XamlGeneratedXamlFileListAbsolute.txt
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\App\obj\Debug\InProcessTempFiles\Activity1.g.cs
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\App\obj\Debug\InProcessTempFiles\Activity1.g.xaml
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\App\obj\Debug\InProcessTempFiles\_App.g.cs
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\App\obj\Debug\App.dll
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\App\obj\Debug\App.pdb
+C:\Users\ys\Desktop\含Telerik框架\Solution\App\bin\App.dll
+C:\Users\ys\Desktop\含Telerik框架\Solution\App\bin\App.pdb
+C:\Users\ys\Desktop\含Telerik框架\Solution\App\bin\BLL.dll
+C:\Users\ys\Desktop\含Telerik框架\Solution\App\bin\Common.dll
+C:\Users\ys\Desktop\含Telerik框架\Solution\App\bin\DAL.dll
+C:\Users\ys\Desktop\含Telerik框架\Solution\App\bin\IBLL.dll
+C:\Users\ys\Desktop\含Telerik框架\Solution\App\bin\BLL.pdb
+C:\Users\ys\Desktop\含Telerik框架\Solution\App\bin\Common.pdb
+C:\Users\ys\Desktop\含Telerik框架\Solution\App\bin\DAL.pdb
+C:\Users\ys\Desktop\含Telerik框架\Solution\App\bin\IBLL.pdb
+C:\Users\ys\Desktop\含Telerik框架\Solution\App\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ys\Desktop\含Telerik框架\Solution\App\obj\Debug\Activity1.g.xaml
+C:\Users\ys\Desktop\含Telerik框架\Solution\App\obj\Debug\_App.g.cs
+C:\Users\ys\Desktop\含Telerik框架\Solution\App\obj\Debug\Activity1.g.cs
+C:\Users\ys\Desktop\含Telerik框架\Solution\App\obj\Debug\App.csproj.XamlGeneratedCodeFileListAbsolute.txt
+C:\Users\ys\Desktop\含Telerik框架\Solution\App\obj\Debug\App.csproj.XamlGeneratedXamlFileListAbsolute.txt
+C:\Users\ys\Desktop\含Telerik框架\Solution\App\obj\Debug\App.dll
+C:\Users\ys\Desktop\含Telerik框架\Solution\App\obj\Debug\App.pdb
+C:\Users\ys\Desktop\含Telerik框架\Solution\App\obj\Debug\InProcessTempFiles\Activity1.g.cs
+C:\Users\ys\Desktop\含Telerik框架\Solution\App\obj\Debug\InProcessTempFiles\Activity1.g.xaml
+C:\Users\ys\Desktop\含Telerik框架\Solution\App\obj\Debug\InProcessTempFiles\_App.g.cs
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\App\bin\App.dll
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\App\bin\App.pdb
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\App\bin\BLL.dll
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\App\bin\Common.dll
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\App\bin\DAL.dll
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\App\bin\IBLL.dll
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\App\bin\BLL.pdb
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\App\bin\Common.pdb
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\App\bin\DAL.pdb
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\App\bin\IBLL.pdb
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\App\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\App\obj\Debug\Activity1.g.xaml
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\App\obj\Debug\_App.g.cs
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\App\obj\Debug\Activity1.g.cs
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\App\obj\Debug\App.csproj.XamlGeneratedCodeFileListAbsolute.txt
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\App\obj\Debug\App.csproj.XamlGeneratedXamlFileListAbsolute.txt
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\App\obj\Debug\InProcessTempFiles\Activity1.g.cs
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\App\obj\Debug\InProcessTempFiles\Activity1.g.xaml
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\App\obj\Debug\InProcessTempFiles\_App.g.cs
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\App\obj\Debug\App.dll
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\App\obj\Debug\App.pdb
+C:\My Documents\Desktop\含Telerik框架fu\Solution\App\bin\App.dll
+C:\My Documents\Desktop\含Telerik框架fu\Solution\App\bin\App.pdb
+C:\My Documents\Desktop\含Telerik框架fu\Solution\App\bin\BLL.dll
+C:\My Documents\Desktop\含Telerik框架fu\Solution\App\bin\Common.dll
+C:\My Documents\Desktop\含Telerik框架fu\Solution\App\bin\DAL.dll
+C:\My Documents\Desktop\含Telerik框架fu\Solution\App\bin\IBLL.dll
+C:\My Documents\Desktop\含Telerik框架fu\Solution\App\bin\BLL.pdb
+C:\My Documents\Desktop\含Telerik框架fu\Solution\App\bin\Common.pdb
+C:\My Documents\Desktop\含Telerik框架fu\Solution\App\bin\DAL.pdb
+C:\My Documents\Desktop\含Telerik框架fu\Solution\App\bin\IBLL.pdb
+C:\My Documents\Desktop\含Telerik框架fu\Solution\App\obj\Debug\App.csprojResolveAssemblyReference.cache
+C:\My Documents\Desktop\含Telerik框架fu\Solution\App\obj\Debug\Activity1.g.xaml
+C:\My Documents\Desktop\含Telerik框架fu\Solution\App\obj\Debug\_App.g.cs
+C:\My Documents\Desktop\含Telerik框架fu\Solution\App\obj\Debug\Activity1.g.cs
+C:\My Documents\Desktop\含Telerik框架fu\Solution\App\obj\Debug\App.csproj.XamlGeneratedCodeFileListAbsolute.txt
+C:\My Documents\Desktop\含Telerik框架fu\Solution\App\obj\Debug\App.csproj.XamlGeneratedXamlFileListAbsolute.txt
+C:\My Documents\Desktop\含Telerik框架fu\Solution\App\obj\Debug\InProcessTempFiles\Activity1.g.cs
+C:\My Documents\Desktop\含Telerik框架fu\Solution\App\obj\Debug\InProcessTempFiles\Activity1.g.xaml
+C:\My Documents\Desktop\含Telerik框架fu\Solution\App\obj\Debug\InProcessTempFiles\_App.g.cs
+C:\My Documents\Desktop\含Telerik框架fu\Solution\App\obj\Debug\App.dll
+C:\My Documents\Desktop\含Telerik框架fu\Solution\App\obj\Debug\App.pdb
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\App\bin\App.dll
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\App\bin\App.pdb
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\App\bin\BLL.dll
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\App\bin\Common.dll
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\App\bin\DAL.dll
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\App\bin\IBLL.dll
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\App\bin\BLL.pdb
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\App\bin\Common.pdb
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\App\bin\DAL.pdb
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\App\bin\IBLL.pdb
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\App\obj\Debug\App.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\App\obj\Debug\Activity1.g.xaml
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\App\obj\Debug\_App.g.cs
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\App\obj\Debug\Activity1.g.cs
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\App\obj\Debug\App.csproj.XamlGeneratedCodeFileListAbsolute.txt
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\App\obj\Debug\App.csproj.XamlGeneratedXamlFileListAbsolute.txt
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\App\obj\Debug\InProcessTempFiles\Activity1.g.cs
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\App\obj\Debug\InProcessTempFiles\Activity1.g.xaml
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\App\obj\Debug\InProcessTempFiles\_App.g.cs
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\App\obj\Debug\App.dll
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\App\obj\Debug\App.pdb
+G:\含Telerik框架fu\Solution\App\bin\App.dll
+G:\含Telerik框架fu\Solution\App\bin\App.pdb
+G:\含Telerik框架fu\Solution\App\bin\BLL.dll
+G:\含Telerik框架fu\Solution\App\bin\Common.dll
+G:\含Telerik框架fu\Solution\App\bin\DAL.dll
+G:\含Telerik框架fu\Solution\App\bin\IBLL.dll
+G:\含Telerik框架fu\Solution\App\bin\BLL.pdb
+G:\含Telerik框架fu\Solution\App\bin\Common.pdb
+G:\含Telerik框架fu\Solution\App\bin\DAL.pdb
+G:\含Telerik框架fu\Solution\App\bin\IBLL.pdb
+G:\含Telerik框架fu\Solution\App\obj\Debug\App.csprojResolveAssemblyReference.cache
+G:\含Telerik框架fu\Solution\App\obj\Debug\Activity1.g.xaml
+G:\含Telerik框架fu\Solution\App\obj\Debug\_App.g.cs
+G:\含Telerik框架fu\Solution\App\obj\Debug\Activity1.g.cs
+G:\含Telerik框架fu\Solution\App\obj\Debug\App.csproj.XamlGeneratedCodeFileListAbsolute.txt
+G:\含Telerik框架fu\Solution\App\obj\Debug\App.csproj.XamlGeneratedXamlFileListAbsolute.txt
+G:\含Telerik框架fu\Solution\App\obj\Debug\InProcessTempFiles\Activity1.g.cs
+G:\含Telerik框架fu\Solution\App\obj\Debug\InProcessTempFiles\Activity1.g.xaml
+G:\含Telerik框架fu\Solution\App\obj\Debug\InProcessTempFiles\_App.g.cs
+G:\含Telerik框架fu\Solution\App\obj\Debug\App.dll
+G:\含Telerik框架fu\Solution\App\obj\Debug\App.pdb

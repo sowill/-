@@ -1,0 +1,168 @@
+﻿@model IEnumerable<CHAIN.DAL.hr_pam_employee>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="tb_top">
+       <div class="top_bar">
+            
+        <div class="input_text FastDiv">
+              <label for="code">
+              职工姓名:
+              </label>
+              @Html.TextBox("employeename_search")           
+         </div>
+         <div class="input_text">
+              <label for="code">
+              职工年龄:
+              </label>
+              @Html.TextBox("employeeage_search")           
+         </div>
+         <div class="input_text">
+              <label for="code">
+              职工性别:
+              </label>
+             @Html.DropDownList("employeesex_search", ViewBag.dplemployeesex as SelectList)         
+         </div>
+         <div class="input_text">
+              <label for="code">
+              职工学历:
+              </label>
+             @Html.DropDownList("employeestudy_search", ViewBag.dplemployeestudy as SelectList)         
+         </div>
+         <div class="input_text FastDiv">
+              <label for="code">
+              职工职位:
+              </label>
+              @Html.TextBox("employeetitle_search")           
+         </div>
+         <div class="input_text FastDiv">
+              <label for="code">
+              职工工资:
+              </label>
+              @Html.TextBox("employeesalary_search")           
+         </div>
+        <div>
+             <span class="divider"></span>
+            <button type="submit"style="float:left">
+                <span>查询</span>
+            </button>
+        </div>
+        </div>
+
+    </div>    
+
+
+
+
+ @(Html.Telerik().Grid<CHAIN.DAL.hr_pam_employee>()
+                  .Name("employeeGrid")
+    .DataKeys(datakey => datakey.Add(o => o.id))  //RouteKey重命名
+    .ToolBar(
+    toolbars =>
+    {
+        toolbars.Insert().ButtonType(GridButtonType.Text).Text("新增");
+        //    toolbars.Custom().ButtonType(GridButtonType.ImageAndText).Action("Create", "EmployeeManagement").Text("新增主子表");
+    })
+    .Columns(columns =>
+    {
+     
+        columns.Bound(o => o.employeename).Width(80);
+        columns.Bound(o => o.employeeage).Width(80);
+        columns.Bound(o => o.employeesex).Width(80).Hidden();
+        columns.Bound(o => o.employeesex1).Width(80);
+            //.ClientTemplate("<span id='test_class'><#=employeesex1#></span>");
+        columns.Bound(o => o.employeestudy).Width(80).Hidden();
+        columns.Bound(o => o.employeestudy1).Width(80);
+        columns.Bound(o => o.employeetitle).Width(80);
+        columns.Bound(o => o.employeesalary).Width(80);
+        columns.Command(commands =>
+        {
+            //commands.Custom("编辑").ButtonType(GridButtonType.ImageAndText).Action("Edit", "EmployeeManagement").Text("编辑");
+            commands.Edit().ButtonType(GridButtonType.Image);
+            commands.Delete().ButtonType(GridButtonType.Image);
+        }).Width(100);
+       
+        
+    })
+    
+    .DataBinding(dataBinding =>
+    {
+
+        dataBinding.Ajax()
+                        .Select("_Index", "employee", new
+                        {
+                            employeesex_search = ViewData["employeesex_search"],
+                            employeename_search = ViewData["employeename_search"],
+                            employeeage_search = ViewData["employeeage_search"],
+                            employeestudy_search=ViewData["employeestudy_search"],
+                            employeetitle_search=ViewData["employeetitle_search"],
+                            employeesaraly_search=ViewData["employeesaraly_search"],
+                        })
+                        .Insert("_Insert_Edit", "employee", new
+                        {
+                            employeesex_search = ViewData["employeesex_search"],
+                            employeename_search = ViewData["employeename_search"],
+                            employeeage_search = ViewData["employeeage_search"],
+                            employeestudy_search = ViewData["employeestudy_search"],
+                            employeetitle_search = ViewData["employeetitle_search"],
+                            employeesaraly_search = ViewData["employeesaraly_search"],
+                        })
+                        .Update("_Insert_Edit", "employee", new
+                        {
+                            employeesex_search = ViewData["employeesex_search"],
+                            employeename_search = ViewData["employeename_search"],
+                            employeeage_search = ViewData["employeeage_search"],
+                            employeestudy_search = ViewData["employeestudy_search"],
+                            employeetitle_search = ViewData["employeetitle_search"],
+                            employeesaraly_search = ViewData["employeesaraly_search"],
+                        })
+                        .Delete("_Delete", "employee", new
+                        {
+                            employeesex_search = ViewData["employeesex_search"],
+                            employeename_search = ViewData["employeename_search"],
+                            employeeage_search = ViewData["employeeage_search"],
+                            employeestudy_search = ViewData["employeestudy_search"],
+                            employeetitle_search = ViewData["employeetitle_search"],
+                            employeesaraly_search = ViewData["employeesaraly_search"],
+                        }
+                        );
+    })
+     .Editable(editing => editing.Mode(GridEditMode.PopUp))
+     .Resizable(resizing => resizing.Columns(true))
+     .Scrollable(o => o.Height(260)).Sortable().Pageable(pages=>pages.PageSize(10))
+     .ClientEvents(events =>
+        {
+            events.OnError("Error");
+                //.OnDataBound("OnDataBound");
+        })
+     )
+}
+     <script language="javascript" type="text/javascript">
+
+         function Error(e) {
+             if (e.XMLHttpRequest.status == "403") {
+                 alert(e.XMLHttpRequest.responseText);
+                 e.preventDefault();
+             }
+         }
+
+//         function OnDataBound() {
+//             var ColorState = "grd_darkred";
+//             var Result = "";
+//             var Grid = $("#employeeGrid");
+//             for (var i = 0; i < Grid.find("#test_class").length; i++) {
+//                 switch (Grid.find("#test_class")[i].textContent) {
+//                     case "0": ColorState = "grd_darkred"; Result = "男"; break;
+//                     case "1": ColorState = "grd_orange"; Result = "女"; break;
+//                     case "-1": ColorState = "grd_red"; Result = "未知"; break;
+//                 }
+//                 Grid.find("#test_class")[i].innerHTML = "<span class='" + ColorState + "'>" + Result + "</span>";
+//             }
+
+//         }
+                 
+      </script>

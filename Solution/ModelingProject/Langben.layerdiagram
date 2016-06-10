@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="f6145bf9-33be-45a3-8ce9-4425ebd11848" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="697b854f-37c3-40e1-8a88-93317ad87306" name="数据访问层">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="9be00311-4d30-4ed3-9d23-06c4cbc73895" direction="Forward">
+          <layerMoniker Id="7ec710fc-3993-462e-b3e6-1721be67d7e9" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="74425c00-c60a-4919-b0d7-35a6c5fb4b04" name="Entity&#xD;&#xA;Framework" />
+        <layer Id="d61a08b6-f36d-4c8f-9293-97d5ee1ff6e2" name="其他应用程序服务" />
+        <layer Id="e52a79e2-64cd-49b7-b2a9-b6e60c193604" name="数据实体" />
+      </childLayers>
+    </layer>
+    <layer Id="a0eadd81-6858-4223-85a8-cd2d2a0c8d79" name="业务逻辑层">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="1ddd8008-eaca-467c-8b10-e1d7997839ae" direction="Forward">
+          <layerMoniker Id="697b854f-37c3-40e1-8a88-93317ad87306" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="8bfbad96-9779-43c9-a17f-1363df48ba70" direction="Forward">
+          <layerMoniker Id="7ec710fc-3993-462e-b3e6-1721be67d7e9" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="9a8da2e5-8d40-4288-b167-11932ef2ebc6" name="业务处理" />
+        <layer Id="ea70aa35-b976-41a9-b0d6-6370472b901d" name="工作流设计器" />
+        <layer Id="9522a1e5-48ca-43b3-b4d6-4987526e22fe" name="工作流活动" />
+      </childLayers>
+    </layer>
+    <layer Id="0acf033c-459a-4ea1-9492-2e83f4b9b020" name="服务层">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="a292edd3-404d-4957-905d-96116342f19c" direction="Forward">
+          <layerMoniker Id="a0eadd81-6858-4223-85a8-cd2d2a0c8d79" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="0bafc1d0-9bf1-47e3-8229-220ec6cdffc8" direction="Forward">
+          <layerMoniker Id="7ec710fc-3993-462e-b3e6-1721be67d7e9" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="93a80852-9f29-41c9-a726-fd2d55e104cc" name="服务契约" />
+        <layer Id="d7071d1d-4a45-4732-9f62-c9bd841c5026" name="数据契约" />
+      </childLayers>
+    </layer>
+    <layer Id="df4641ef-a6cc-474c-b50e-57672c6fb964" name="展示层（MVC框架）">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="d985439b-4ed6-4c6e-b73f-0e7419f70b0d" direction="Forward">
+          <layerMoniker Id="a0eadd81-6858-4223-85a8-cd2d2a0c8d79" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="c00fdb59-32fd-4273-9559-38181a455a12" direction="Forward">
+          <layerMoniker Id="7ec710fc-3993-462e-b3e6-1721be67d7e9" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="ce20158f-8e9e-4996-a5c2-bec1c7271961" name="视图（View）" />
+        <layer Id="54aba0a9-e8ee-4f1c-86d9-7ba8273637a6" name="Models（页面模型）" />
+        <layer Id="99d9722a-21e4-4d25-a0f2-1b071d4a6e08" name="Controller（控制器）" />
+      </childLayers>
+    </layer>
+    <layer Id="c5c0b147-2af3-45f9-a987-bb89fe26f664" name="其他应用程序">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="5f5595e1-ecc8-4c3c-b189-77f508367ad4" direction="Bidirectional">
+          <layerMoniker Id="0acf033c-459a-4ea1-9492-2e83f4b9b020" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="6e1be495-752f-4b68-bba8-612f6b2916da" name="代理" />
+      </childLayers>
+    </layer>
+    <layer Id="7ec710fc-3993-462e-b3e6-1721be67d7e9" name="公共组件">
+      <childLayers>
+        <layer Id="fbbe20ea-898d-4bfd-8f49-ddea4d0a4aae" name="安全组件" />
+        <layer Id="456ca536-0e68-4752-83ce-ee1a36e95cc9" name="日志组件" />
+        <layer Id="78c2a125-306a-45d6-b82e-6b605eaab006" name="公共类库" />
+      </childLayers>
+    </layer>
+  </layers>
+</layerModel>

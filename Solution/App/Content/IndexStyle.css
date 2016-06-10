@@ -1,0 +1,51 @@
+﻿body
+{
+    font-family: 微软雅黑,新宋体;
+}
+/*扩展*/
+.icon-details
+{
+    background: url('../Images/view.png') no-repeat;
+}
+
+#divQuery
+{
+    padding: 5px 0px 0px 5px;
+    width: 726px;
+}
+.editor-field-search
+{
+    width: 262px;
+    height: 43px;
+    float: left;
+}
+.editor-label-search
+{
+    width: 98px;
+    height: 43px;
+    float: left;
+}
+.editor-field-to
+{
+    width: 601px;
+    height: 43px;
+    float: left;
+}
+.editor-field-search select
+{
+    height: 24px;
+    width: 214px;
+    border: 1px solid #CCC;
+}
+.editor-field-search input
+{
+    height: 21px;
+    width: 214px;
+    border: 1px solid #CCC;
+}
+.editor-field-to input
+{
+    height: 21px;
+    width: 214px;
+    border: 1px solid #CCC;
+}

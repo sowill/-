@@ -1,0 +1,9 @@
+C:\Users\summerming\Desktop\2012111015221318\Solution\WFActivitys\bin\Debug\WFActivitys.dll
+C:\Users\summerming\Desktop\2012111015221318\Solution\WFActivitys\bin\Debug\WFActivitys.pdb
+C:\Users\summerming\Desktop\2012111015221318\Solution\WFActivitys\bin\Debug\DAL.dll
+C:\Users\summerming\Desktop\2012111015221318\Solution\WFActivitys\bin\Debug\Common.dll
+C:\Users\summerming\Desktop\2012111015221318\Solution\WFActivitys\bin\Debug\DAL.pdb
+C:\Users\summerming\Desktop\2012111015221318\Solution\WFActivitys\bin\Debug\Common.pdb
+C:\Users\summerming\Desktop\2012111015221318\Solution\WFActivitys\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\summerming\Desktop\2012111015221318\Solution\WFActivitys\obj\Debug\WFActivitys.dll
+C:\Users\summerming\Desktop\2012111015221318\Solution\WFActivitys\obj\Debug\WFActivitys.pdb

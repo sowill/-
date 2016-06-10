@@ -1,0 +1,57 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title>Demo</title>
+
+<script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.7.2.js")"></script>
+    
+<script src="@Url.Content("~/Scripts/jquery.validate.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/MicrosoftAjax.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/MicrosoftMvcAjax.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/MicrosoftMvcJQueryValidation.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/MicrosoftMvcValidation.js")"  type="text/javascript"></script>
+<script type="text/javascript" src="@Url.Content("~/Content/flexigrid/fastQ.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Scripts/js/grid.locale-cn.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Scripts/js/jquery.jqGrid.min.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/js/PubJs.js")"></script>
+<script src="@Url.Content("~/Content/flexigrid/flexigrid.pack.js")" type="text/javascript"></script>
+
+<link href="@Url.Content("~/Content/flexigrid/css/flexigrid/flexigrid.pack.css")" rel="stylesheet"
+    type="text/css" />
+ <link rel="stylesheet" type="text/css" media="screen" href="@Url.Content("~/Res/FastQ/jquery.ui.combogrid.css")" />
+ <link rel="stylesheet" type="text/css" media="screen" href="@Url.Content("~/Res/FastQ/jquery-ui-1.8.9.custom.css")" />
+
+<link rel="stylesheet" type="text/css" media="screen" href="@Url.Content("~/Content/css/ui.jqgrid.css")" />
+<link href="@Url.Content("~/Content/style-HB.css") " rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/main-HB.css") " rel="stylesheet" type="text/css" />
+
+@Html.Telerik().StyleSheetRegistrar().DefaultGroup(group => group.Add("telerik.common.css").Add("telerik.office2010silver.css").Compress(true))
+
+
+@RenderSection("HeadContent", required:false)
+
+<!--[if lt IE 9]> 
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> 
+<![endif]--> 
+
+</head>
+<body>
+
+<div id="page">
+<div id="main">
+      @RenderBody()
+
+<div class="corner rc-bottomleft"></div>
+<div class="corner rc-bottomright"></div>
+</div>
+</div>
+@Html.Telerik().ScriptRegistrar().Globalization(true).DefaultGroup(group => group.Compress(true))
+<script src="@Url.Content("~/Res/FastQ/jquery-ui-1.8.9.custom.min.js")" type="text/javascript"></script> 
+<script src="@Url.Content("~/Res/FastQ/jquery.ui.combogrid-1.5.0.js")" type="text/javascript"></script> 
+  
+</body>
+</html>

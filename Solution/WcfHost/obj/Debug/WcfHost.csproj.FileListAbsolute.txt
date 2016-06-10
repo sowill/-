@@ -1,0 +1,13 @@
+C:\Users\summerming\Desktop\2012111015221318\Solution\WcfHost\bin\WcfHost.dll
+C:\Users\summerming\Desktop\2012111015221318\Solution\WcfHost\bin\WcfHost.pdb
+C:\Users\summerming\Desktop\2012111015221318\Solution\WcfHost\bin\BLL.dll
+C:\Users\summerming\Desktop\2012111015221318\Solution\WcfHost\bin\IBLL.dll
+C:\Users\summerming\Desktop\2012111015221318\Solution\WcfHost\bin\DAL.dll
+C:\Users\summerming\Desktop\2012111015221318\Solution\WcfHost\bin\Common.dll
+C:\Users\summerming\Desktop\2012111015221318\Solution\WcfHost\bin\BLL.pdb
+C:\Users\summerming\Desktop\2012111015221318\Solution\WcfHost\bin\IBLL.pdb
+C:\Users\summerming\Desktop\2012111015221318\Solution\WcfHost\bin\DAL.pdb
+C:\Users\summerming\Desktop\2012111015221318\Solution\WcfHost\bin\Common.pdb
+C:\Users\summerming\Desktop\2012111015221318\Solution\WcfHost\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\summerming\Desktop\2012111015221318\Solution\WcfHost\obj\Debug\WcfHost.dll
+C:\Users\summerming\Desktop\2012111015221318\Solution\WcfHost\obj\Debug\WcfHost.pdb

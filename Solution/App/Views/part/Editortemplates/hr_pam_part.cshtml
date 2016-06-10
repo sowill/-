@@ -1,0 +1,21 @@
+﻿@model CHAIN.DAL.hr_pam_part
+@{
+    ViewBag.Title = "part";
+}
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+@Html.ValidationSummary()
+<div class="tb_top top_bar w600px">
+    @*         <div class="input_text w45 edit_suspension">
+                   @Html.LabelFor(model=>model.employeename_search)
+                   @Html.EditorFor(model => model.employeename_search)
+                 @Html.ValidationMessageFor(model => model.employeename_search)
+         </div>*@
+    @Html.HiddenFor(model => model.id)
+     @Html.HiddenFor(model => model.employeeid)
+    <div class="input_text w45 edit_suspension">
+        @Html.LabelFor(model => model.departmentname)
+        @Html.DropDownListFor(model => model.departmentid, ViewBag.dpldepartmentname as SelectList)
+        @* @Html.ValidationMessageFor(model => model.departmentname)*@
+    </div>
+</div>

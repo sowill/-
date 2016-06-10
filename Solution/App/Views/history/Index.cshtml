@@ -1,0 +1,146 @@
+﻿@model IEnumerable<CHAIN.DAL.hr_srv_history>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="tb_top">
+       <div class="top_bar">
+            
+        <div class="input_text FastDiv">
+              <label for="code">
+              职工姓名:
+              </label>
+              @Html.TextBox("employeename_search")           
+         </div>
+         <div class="input_text">
+              <label for="code">
+              出行状态:
+              </label>
+              @Html.DropDownList("chuxing_search", ViewBag.dplchuxing as SelectList)           
+         </div>
+        <div class="input_text">
+             <label for="code">
+             出行时间：
+             </label>
+            @Html.Telerik().DatePicker().Name("chuxing_date_search").Format("yyyy-MM-dd")
+         </div>
+         
+        @* <div class="input_text">
+             <label for="code">
+             出行时间段：
+             </label>
+            @Html.Telerik().DatePicker().Name("chuxing_date_search1").Format("yyyy-MM-dd")
+         </div>
+         <div class="input_text">
+             <label for="code">
+             至：
+             </label>
+            @Html.Telerik().DatePicker().Name("chuxing_date_search2").Format("yyyy-MM-dd")
+         </div>*@
+        <div>
+             <span class="divider"></span>
+            <button type="submit"style="float:left">
+                <span>查询</span>
+            </button>
+        </div>
+        </div>
+
+    </div>    
+
+
+
+
+ @(Html.Telerik().Grid<CHAIN.DAL.hr_srv_history>()
+                  .Name("historyGrid")
+    .DataKeys(datakey => datakey.Add(o => o.id))  //RouteKey重命名
+    .ToolBar(
+    toolbars =>
+    {
+        //toolbars.Insert().ButtonType(GridButtonType.ImageAndText).Text("新增");
+        //    toolbars.Custom().ButtonType(GridButtonType.ImageAndText).Action("Create", "EmployeeManagement").Text("新增主子表");
+    })
+    .Columns(columns =>
+    {
+     
+        columns.Bound(o => o.employeename).Width(80);
+        columns.Bound(o => o.chuxing_date).Width(80);
+        columns.Bound(o => o.chuxing).Width(80).Hidden();
+        columns.Bound(o => o.employeeid).Width(80).Hidden();
+        columns.Bound(o => o.chuxing1).Width(80);
+        
+        columns.Bound(o => o.memo).Width(80);
+        columns.Command(commands =>
+        {
+            //commands.Custom("编辑").ButtonType(GridButtonType.ImageAndText).Action("Edit", "EmployeeManagement").Text("编辑");
+            commands.Edit().ButtonType(GridButtonType.Image);
+            commands.Delete().ButtonType(GridButtonType.Image);
+        }).Width(100);
+       
+        
+    })
+    
+    .DataBinding(dataBinding =>
+    {
+
+        dataBinding.Ajax()
+                        .Select("_Index", "history", new
+                        {
+                            employeename_search = ViewData["employeename_search"],
+                            chuxing_search = ViewData["chuxing_search"],
+                            chuxing_date_search = ViewData["chuxing_date_search"],
+                            
+                            memo_search = ViewData["memo_search"],
+                        })
+                        .Insert("_Insert_Edit", "history", new
+                        {
+                            employeename_search = ViewData["employeename_search"],
+                            chuxing_search = ViewData["chuxing_search"],
+                            chuxing_date_search = ViewData["chuxing_date_search"],
+                            
+                            memo_search = ViewData["memo_search"],
+                        })
+                        .Update("_Insert_Edit", "history", new
+                        {
+                            employeename_search = ViewData["employeename_search"],
+                            chuxing_search = ViewData["chuxing_search"],
+                            chuxing_date_search = ViewData["chuxing_date_search"],
+                            
+                            memo_search = ViewData["memo_search"],
+                        })
+                        .Delete("_Delete", "history", new
+                        {
+                            employeename_search = ViewData["employeename_search"],
+                            chuxing_search = ViewData["chuxing_search"],
+                            chuxing_date_search = ViewData["chuxing_date_search"],
+                            
+                            memo_search = ViewData["memo_search"],
+                        }
+                        );
+    })
+     .Editable(editing => editing.Mode(GridEditMode.PopUp))
+     .Resizable(resizing => resizing.Columns(true))
+     .Scrollable(o => o.Height(260)).Sortable().Pageable(pages=>pages.PageSize(10))
+     .ClientEvents(events =>
+        {
+            events.OnError("Error");
+        })
+         )
+}
+     <script language="javascript" type="text/javascript">
+
+         function Error(e) {
+             if (e.XMLHttpRequest.status == "403") {
+                 alert(e.XMLHttpRequest.responseText);
+                 e.preventDefault();
+             }
+         }
+
+        function getDatePicker(){
+            var datepicker = $("#chuxing_date_search").data("tchuxing_date_search");
+            return datepicker;
+        }
+        
+</script>

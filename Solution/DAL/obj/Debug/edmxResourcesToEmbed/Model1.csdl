@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SysModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="SysEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SysException" EntityType="SysModel.SysException" />
+    <EntitySet Name="SysField" EntityType="SysModel.SysField" />
+    <EntitySet Name="SysLog" EntityType="SysModel.SysLog" />
+    <EntitySet Name="SysMenu" EntityType="SysModel.SysMenu" />
+    <AssociationSet Name="FK_SYSFIELD_REFERENCE_SYSFIELD" Association="SysModel.FK_SYSFIELD_REFERENCE_SYSFIELD">
+      <End Role="SysField" EntitySet="SysField" />
+      <End Role="SysField1" EntitySet="SysField" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SYSMENU_REFERENCE_SYSMENU" Association="SysModel.FK_SYSMENU_REFERENCE_SYSMENU">
+      <End Role="SysMenu" EntitySet="SysMenu" />
+      <End Role="SysMenu1" EntitySet="SysMenu" />
+    </AssociationSet>
+    <EntitySet Name="SysRole" EntityType="SysModel.SysRole" />
+    <AssociationSet Name="SysMenuSysRole" Association="SysModel.SysMenuSysRole">
+      <End Role="SysMenu" EntitySet="SysMenu" />
+      <End Role="SysRole" EntitySet="SysRole" />
+    </AssociationSet>
+    <EntitySet Name="FileUploader" EntityType="SysModel.FileUploader" />
+    <EntitySet Name="SysPerson" EntityType="SysModel.SysPerson" />
+    <AssociationSet Name="FileUploaderSysPerson" Association="SysModel.FileUploaderSysPerson">
+      <End Role="FileUploader" EntitySet="FileUploader" />
+      <End Role="SysPerson" EntitySet="SysPerson" />
+    </AssociationSet>
+    <AssociationSet Name="SysRoleSysPerson" Association="SysModel.SysRoleSysPerson">
+      <End Role="SysPerson" EntitySet="SysPerson" />
+      <End Role="SysRole" EntitySet="SysRole" />
+    </AssociationSet>
+    <EntitySet Name="hr_pam_department" EntityType="SysModel.hr_pam_department" />
+    <EntitySet Name="hr_pam_part" EntityType="SysModel.hr_pam_part" />
+    <EntitySet Name="hr_pam_employee" EntityType="SysModel.hr_pam_employee" />
+    <EntitySet Name="hr_srv_history" EntityType="SysModel.hr_srv_history" />
+  </EntityContainer>
+  <EntityType Name="SysException">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LeiXing" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Message" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Result" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remark" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="State" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreateTime" />
+    <Property Type="String" Name="CreatePerson" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SysField">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MyTexts" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ParentId" MaxLength="36" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MyTables" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MyColums" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Sort" />
+    <Property Type="String" Name="Remark" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreateTime" />
+    <Property Type="String" Name="CreatePerson" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="UpdateTime" />
+    <Property Type="String" Name="UpdatePerson" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SysField1" Relationship="SysModel.FK_SYSFIELD_REFERENCE_SYSFIELD" FromRole="SysField" ToRole="SysField1" />
+    <NavigationProperty Name="SysField2" Relationship="SysModel.FK_SYSFIELD_REFERENCE_SYSFIELD" FromRole="SysField1" ToRole="SysField" />
+  </EntityType>
+  <EntityType Name="SysLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PersonId" MaxLength="36" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Message" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Result" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MenuId" MaxLength="36" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Ip" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remark" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="State" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreateTime" />
+    <Property Type="String" Name="CreatePerson" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SysMenu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ParentId" MaxLength="36" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Url" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Iconic" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Sort" />
+    <Property Type="String" Name="Remark" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="State" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CreatePerson" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreateTime" />
+    <Property Type="DateTime" Name="UpdateTime" />
+    <Property Type="String" Name="UpdatePerson" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SysMenu1" Relationship="SysModel.FK_SYSMENU_REFERENCE_SYSMENU" FromRole="SysMenu" ToRole="SysMenu1" />
+    <NavigationProperty Name="SysMenu2" Relationship="SysModel.FK_SYSMENU_REFERENCE_SYSMENU" FromRole="SysMenu1" ToRole="SysMenu" />
+    <NavigationProperty Name="SysRole" Relationship="SysModel.SysMenuSysRole" FromRole="SysMenu" ToRole="SysRole" />
+  </EntityType>
+  <Association Name="FK_SYSFIELD_REFERENCE_SYSFIELD">
+    <End Type="SysModel.SysField" Role="SysField" Multiplicity="0..1" />
+    <End Type="SysModel.SysField" Role="SysField1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysField">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysField1">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SYSMENU_REFERENCE_SYSMENU">
+    <End Type="SysModel.SysMenu" Role="SysMenu" Multiplicity="0..1" />
+    <End Type="SysModel.SysMenu" Role="SysMenu1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysMenu">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysMenu1">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="SysRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remark" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreateTime" />
+    <Property Type="String" Name="CreatePerson" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="UpdateTime" />
+    <Property Type="String" Name="UpdatePerson" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SysMenu" Relationship="SysModel.SysMenuSysRole" FromRole="SysRole" ToRole="SysMenu" />
+    <NavigationProperty Name="SysPerson" Relationship="SysModel.SysRoleSysPerson" FromRole="SysRole" ToRole="SysPerson" />
+  </EntityType>
+  <Association Name="SysMenuSysRole">
+    <End Type="SysModel.SysMenu" Role="SysMenu" Multiplicity="*" />
+    <End Type="SysModel.SysRole" Role="SysRole" Multiplicity="*" />
+  </Association>
+  <EntityType Name="FileUploader">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Path" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FullPath" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Suffix" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Size" />
+    <Property Type="String" Name="Remark" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="State" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreateTime" />
+    <Property Type="String" Name="CreatePerson" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SysPerson" Relationship="SysModel.FileUploaderSysPerson" FromRole="FileUploader" ToRole="SysPerson" />
+  </EntityType>
+  <EntityType Name="SysPerson">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MyName" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SurePassword" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MobilePhoneNumber" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PhoneNumber" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Province" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="City" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Village" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmailAddress" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Remark" Precision="18" Scale="0" />
+    <Property Type="String" Name="State" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreateTime" />
+    <Property Type="String" Name="CreatePerson" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="UpdateTime" />
+    <Property Type="String" Name="UpdatePerson" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="Version" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="FileUploader" Relationship="SysModel.FileUploaderSysPerson" FromRole="SysPerson" ToRole="FileUploader" />
+    <NavigationProperty Name="SysRole" Relationship="SysModel.SysRoleSysPerson" FromRole="SysPerson" ToRole="SysRole" />
+  </EntityType>
+  <Association Name="FileUploaderSysPerson">
+    <End Type="SysModel.FileUploader" Role="FileUploader" Multiplicity="*" />
+    <End Type="SysModel.SysPerson" Role="SysPerson" Multiplicity="*" />
+  </Association>
+  <Association Name="SysRoleSysPerson">
+    <End Type="SysModel.SysPerson" Role="SysPerson" Multiplicity="*" />
+    <End Type="SysModel.SysRole" Role="SysRole" Multiplicity="*" />
+  </Association>
+  <EntityType Name="hr_pam_department">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="departmentname" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="departmentdetails" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="departmentnumbersum" />
+  </EntityType>
+  <EntityType Name="hr_pam_part">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="employeeid" Nullable="false" />
+    <Property Type="Int32" Name="departmentid" Nullable="false" />
+  </EntityType>
+  <EntityType Name="hr_pam_employee">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="employeename" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="employeeage" Nullable="false" />
+    <Property Type="Int32" Name="employeesex" Nullable="false" />
+    <Property Type="Int32" Name="employeestudy" Nullable="false" />
+    <Property Type="String" Name="employeetitle" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="employeesalary" Nullable="false" />
+  </EntityType>
+  <EntityType Name="hr_srv_history">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="employeeid" Nullable="false" />
+    <Property Type="Int32" Name="chuxing" Nullable="false" />
+    <Property Type="DateTime" Name="chuxing_date" Nullable="false" />
+    <Property Type="String" Name="memo" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="fanhui_date" />
+  </EntityType>
+</Schema>

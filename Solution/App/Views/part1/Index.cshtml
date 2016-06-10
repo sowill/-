@@ -1,0 +1,182 @@
+﻿@model IEnumerable<CHAIN.DAL.hr_pam_part>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="tb_top">
+       <div class="top_bar">
+            
+        <div class="input_text FastDiv">
+              <label for="code">
+              职工姓名:
+              </label>
+              @Html.TextBox("employeename_search")           
+         </div>
+         <div class="input_text">
+              <label for="code">
+              部门名称:
+              </label>
+             @Html.DropDownList("departmentname_search", ViewBag.dpldepartmentname as SelectList)         
+         </div>
+        <div>
+             <span class="divider"></span>
+            <button type="submit"style="float:left">
+                <span>查询</span>
+            </button>
+        </div>
+        </div>
+
+    </div>
+    
+    
+        
+ @(Html.Telerik().Grid<CHAIN.DAL.hr_pam_part>()
+                      .Name("Employees")
+                      .DataKeys(datakey => datakey.Add(o => o.id))
+     .DataBinding(dataBinding =>
+    {
+
+        dataBinding.Ajax()
+                        .Select("_Indexemployees", "part1", new
+                        {
+                            
+                            employeename_search = ViewData["employeename_search"],
+                            departmentname_search = ViewData["departmentname_search"],
+                        })
+                        .Insert("_Insert_Editemployees", "part1", new
+                        {
+                            departmentname_search = ViewData["departmentname_search"],
+                            employeename_search = ViewData["employeename_search"],
+                        })
+                        .Update("_Insert_Editemployees", "part1", new
+                        {
+                            departmentname_search = ViewData["departmentname_search"],
+                            employeename_search = ViewData["employeename_search"],
+                        })
+                        .Delete("_Deleteemployees", "part1", new
+                        {
+                            departmentname_search = ViewData["departmentname_search"],
+                            employeename_search = ViewData["employeename_search"],
+                        }
+                        );
+    })
+   
+    .Columns(columns =>
+    {
+        columns.Bound(o => o.employeename).Width(80);        
+        columns.Bound(o => o.employeeid).Width(80).Hidden();
+        //columns.Bound(o => o.departmentid).Width(80).Hidden();
+        //columns.Bound(o => o.departmentname).Width(80).Hidden();    
+        columns.Command(commands =>
+        {
+            
+            //commands.Edit().ButtonType(GridButtonType.Image);
+            commands.Delete().ButtonType(GridButtonType.Image);
+        }).Width(100);
+
+    })
+    
+    
+    
+    
+    
+     .DetailView(detailView => detailView.ClientTemplate(
+          Html.Telerik().Grid<CHAIN.DAL.hr_pam_part>()
+                  .Name("Departments_<#= employeeid #>")
+
+                  .DataKeys(datakey => datakey.Add(o => o.id))
+    .ToolBar(
+        toolbars =>
+        {
+            toolbars.Insert().ButtonType(GridButtonType.Text).Text("新增");
+        })
+    .DataBinding(dataBinding =>
+    {
+
+        dataBinding.Ajax()
+                        .Select("_Indexdepartments", "part1", new
+                        {
+                            departmentname_search = ViewData["departmentname_search"],
+                            eid = "<#= employeeid #>",
+                        })
+                        .Insert("_Insert_Editdepartments", "part1", new
+                        {
+                            departmentname_search = ViewData["departmentname_search"],
+                            eid = "<#= employeeid #>",
+                        })
+                        .Update("_Insert_Editdepartments", "part1", new
+                        {
+                            departmentname_search = ViewData["departmentname_search"],
+                            eid = "<#= employeeid #>",
+                        })
+                        .Delete("_Deletedepartments", "part1", new
+                        {
+                            departmentname_search = ViewData["departmentname_search"],
+                            eid = "<#= employeeid #>",
+                        }
+                        );
+        //int[] checkedRecords = (int[])ViewData["checkedRecords"];
+    })
+    .Columns(columns =>
+    {   
+                      
+        columns.Bound(o => o.departmentname).Width(80);
+        columns.Bound(o => o.departmentid)
+            //.ClientTemplate("<input type='checkbox' name='checkedRecords' value='<#= departmentid #>' />")
+            //.Title("")
+            .Width(80).Hidden();
+        //columns.Bound(o => o.employeeid).Width(80).Hidden();
+        //columns.Bound(o => o.employeename).Width(80).Hidden();
+        
+            //.HtmlAttributes(new { style = "text-align:center" });
+        columns.Command(commands =>
+        {
+            
+            commands.Edit().ButtonType(GridButtonType.Image);
+            commands.Delete().ButtonType(GridButtonType.Image);
+        }).Width(100);
+    })
+        .Pageable()
+        .Editable(editing => editing.Mode(GridEditMode.PopUp))
+        .Resizable(resizing => resizing.Columns(true))
+        .Scrollable(o => o.Height(80)).Sortable().Pageable(pages => pages.PageSize(3))
+        .ClientEvents(events =>
+         {
+             events.OnError("Error");
+             events.OnRowDataBound("onRowDataBound");
+         })
+        .ToHtmlString()
+   ))
+     .Editable(editing => editing.Mode(GridEditMode.PopUp))
+     .Resizable(resizing => resizing.Columns(true))
+     .Scrollable(o => o.Height(260)).Sortable().Pageable(pages => pages.PageSize(10))
+     .ClientEvents(events =>
+     {
+         events.OnError("Error");
+         events.OnRowDataBound("onRowDataBound");
+     })
+         )
+}
+     <script language="javascript" type="text/javascript">
+
+         function Error(e) {
+             if (e.XMLHttpRequest.status == "403") {
+                 alert(e.XMLHttpRequest.responseText);
+                 e.preventDefault();
+             }
+         }
+
+         function onRowDataBound(e) {
+             var grid = $(this).data('tGrid');
+             // Expand the first row only
+//             if (grid.$rows().index(e.row) == 0) {
+//                 grid.expandRow(e.row);
+//             }
+         }
+
+
+                          
+      </script>

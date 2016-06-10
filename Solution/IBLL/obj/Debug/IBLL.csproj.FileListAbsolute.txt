@@ -1,0 +1,63 @@
+C:\Users\summerming\Desktop\2012111015221318\Solution\IBLL\bin\Debug\IBLL.dll
+C:\Users\summerming\Desktop\2012111015221318\Solution\IBLL\bin\Debug\IBLL.pdb
+C:\Users\summerming\Desktop\2012111015221318\Solution\IBLL\bin\Debug\Common.dll
+C:\Users\summerming\Desktop\2012111015221318\Solution\IBLL\bin\Debug\DAL.dll
+C:\Users\summerming\Desktop\2012111015221318\Solution\IBLL\bin\Debug\Common.pdb
+C:\Users\summerming\Desktop\2012111015221318\Solution\IBLL\bin\Debug\DAL.pdb
+C:\Users\summerming\Desktop\2012111015221318\Solution\IBLL\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\summerming\Desktop\2012111015221318\Solution\IBLL\obj\Debug\IBLL.dll
+C:\Users\summerming\Desktop\2012111015221318\Solution\IBLL\obj\Debug\IBLL.pdb
+C:\Users\km-zhang\Desktop\2012111015221318\Solution\IBLL\bin\Debug\IBLL.dll
+C:\Users\km-zhang\Desktop\2012111015221318\Solution\IBLL\bin\Debug\IBLL.pdb
+C:\Users\km-zhang\Desktop\2012111015221318\Solution\IBLL\bin\Debug\Common.dll
+C:\Users\km-zhang\Desktop\2012111015221318\Solution\IBLL\bin\Debug\DAL.dll
+C:\Users\km-zhang\Desktop\2012111015221318\Solution\IBLL\bin\Debug\Common.pdb
+C:\Users\km-zhang\Desktop\2012111015221318\Solution\IBLL\bin\Debug\DAL.pdb
+C:\Users\km-zhang\Desktop\2012111015221318\Solution\IBLL\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\km-zhang\Desktop\2012111015221318\Solution\IBLL\obj\Debug\IBLL.dll
+C:\Users\km-zhang\Desktop\2012111015221318\Solution\IBLL\obj\Debug\IBLL.pdb
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\IBLL\bin\Debug\IBLL.dll
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\IBLL\bin\Debug\IBLL.pdb
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\IBLL\bin\Debug\Common.dll
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\IBLL\bin\Debug\DAL.dll
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\IBLL\bin\Debug\Common.pdb
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\IBLL\bin\Debug\DAL.pdb
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\IBLL\obj\Debug\ResolveAssemblyReference.cache
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\IBLL\obj\Debug\IBLL.dll
+E:\2框架+需求\MVC3\框架+需求\含Telerik框架\含Telerik框架\Solution\IBLL\obj\Debug\IBLL.pdb
+C:\Users\ys\Desktop\含Telerik框架\Solution\IBLL\bin\Debug\IBLL.dll
+C:\Users\ys\Desktop\含Telerik框架\Solution\IBLL\bin\Debug\IBLL.pdb
+C:\Users\ys\Desktop\含Telerik框架\Solution\IBLL\bin\Debug\Common.dll
+C:\Users\ys\Desktop\含Telerik框架\Solution\IBLL\bin\Debug\DAL.dll
+C:\Users\ys\Desktop\含Telerik框架\Solution\IBLL\bin\Debug\Common.pdb
+C:\Users\ys\Desktop\含Telerik框架\Solution\IBLL\bin\Debug\DAL.pdb
+C:\Users\ys\Desktop\含Telerik框架\Solution\IBLL\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ys\Desktop\含Telerik框架\Solution\IBLL\obj\Debug\IBLL.dll
+C:\Users\ys\Desktop\含Telerik框架\Solution\IBLL\obj\Debug\IBLL.pdb
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\IBLL\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\IBLL\obj\Debug\IBLL.dll
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\IBLL\obj\Debug\IBLL.pdb
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\IBLL\bin\Debug\IBLL.dll
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\IBLL\bin\Debug\IBLL.pdb
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\IBLL\bin\Debug\Common.dll
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\IBLL\bin\Debug\DAL.dll
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\IBLL\bin\Debug\Common.pdb
+C:\Users\ys\Desktop\含Telerik框架fu\含Telerik框架fu\Solution\IBLL\bin\Debug\DAL.pdb
+C:\My Documents\Desktop\含Telerik框架fu\Solution\IBLL\bin\Debug\IBLL.dll
+C:\My Documents\Desktop\含Telerik框架fu\Solution\IBLL\bin\Debug\IBLL.pdb
+C:\My Documents\Desktop\含Telerik框架fu\Solution\IBLL\bin\Debug\Common.dll
+C:\My Documents\Desktop\含Telerik框架fu\Solution\IBLL\bin\Debug\DAL.dll
+C:\My Documents\Desktop\含Telerik框架fu\Solution\IBLL\bin\Debug\Common.pdb
+C:\My Documents\Desktop\含Telerik框架fu\Solution\IBLL\bin\Debug\DAL.pdb
+C:\My Documents\Desktop\含Telerik框架fu\Solution\IBLL\obj\Debug\IBLL.csprojResolveAssemblyReference.cache
+C:\My Documents\Desktop\含Telerik框架fu\Solution\IBLL\obj\Debug\IBLL.dll
+C:\My Documents\Desktop\含Telerik框架fu\Solution\IBLL\obj\Debug\IBLL.pdb
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\IBLL\bin\Debug\IBLL.dll
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\IBLL\bin\Debug\IBLL.pdb
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\IBLL\bin\Debug\Common.dll
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\IBLL\bin\Debug\DAL.dll
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\IBLL\bin\Debug\Common.pdb
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\IBLL\bin\Debug\DAL.pdb
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\IBLL\obj\Debug\IBLL.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\IBLL\obj\Debug\IBLL.dll
+C:\Users\Administrator\Desktop\含Telerik框架fu\Solution\IBLL\obj\Debug\IBLL.pdb

@@ -1,0 +1,2 @@
+obj\x86\Debug\_WFDesigner.g.cs
+obj\x86\Debug\template.g.cs

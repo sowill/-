@@ -1,0 +1,107 @@
+﻿@model IEnumerable<CHAIN.DAL.hr_pam_department>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="tb_top">
+       <div class="top_bar">
+            
+        <div class="input_text FastDiv">
+              <label for="code">
+              部门名称:
+              </label>
+              @Html.DropDownList("departmentname_search", ViewBag.dpldepartmentname as SelectList)           
+         </div>
+
+        <div>
+             <span class="divider"></span>
+            <button type="submit"style="float:left">
+                <span>查询</span>
+            </button>
+        </div>
+        </div>
+
+    </div>    
+
+
+
+
+ @(Html.Telerik().Grid<CHAIN.DAL.hr_pam_department>()
+              .Name("departmentGrid")
+    .DataKeys(datakey => datakey.Add(o => o.id))  //RouteKey重命名
+    .ToolBar(
+    toolbars =>
+    {
+        toolbars.Insert().ButtonType(GridButtonType.Text ).Text("新增");
+        //    toolbars.Custom().ButtonType(GridButtonType.ImageAndText).Action("Create", "EmployeeManagement").Text("新增主子表");
+    })
+    .Columns(columns =>
+    {
+        columns.Bound(o => o.departmentname).Width(80);
+        //columns.Bound(o => o.departmentnumbersum).Width(80);
+        columns.Bound(o => o.departmentdetails).Width(100);
+        columns.Command(commands =>
+        {
+            //commands.Custom("编辑").ButtonType(GridButtonType.ImageAndText).Action("Edit", "EmployeeManagement").Text("编辑");
+            commands.Edit().ButtonType(GridButtonType.Image);
+            commands.Delete().ButtonType(GridButtonType.Image);
+        }).Width(100);
+       
+        
+    })
+    
+    .DataBinding(dataBinding =>
+    {
+
+        dataBinding.Ajax()
+                        .Select("_Index", "department", new
+                        {
+                            departmentname_search = ViewData["departmentname_search"],
+                            search_departmentdetails = ViewData["search_departmentdetails"],
+                        })
+                        .Insert("_Insert_Edit", "department", new
+                        {
+                            
+                            departmentname_search = ViewData["departmentname_search"],
+                            search_departmentdetails = ViewData["search_departmentdetails"],
+                        })
+                        .Update("_Insert_Edit", "department", new
+                        {
+                           
+                            departmentname_search = ViewData["departmentname_search"],
+                            search_departmentdetails = ViewData["search_departmentdetails"],
+                        })
+                        .Delete("_Delete", "department", new
+                        {
+                           
+                            departmentname_search = ViewData["departmentname_search"],
+                            search_departmentdetails = ViewData["search_departmentdetails"],
+                        }
+                        );
+    })
+     .Editable(editing => editing.Mode(GridEditMode.PopUp))
+     .Resizable(resizing => resizing.Columns(true))
+     .Scrollable(o => o.Height(260)).Sortable()
+     .ClientEvents(events =>
+        {
+            events.OnError("Error");
+        })
+     )
+}
+     <script language="javascript" type="text/javascript">
+
+         function Error(e) {
+             if (e.XMLHttpRequest.status == "403") {
+                 alert(e.XMLHttpRequest.responseText);
+                 e.preventDefault();
+             }
+         }
+
+        
+
+         
+         
+      </script>
